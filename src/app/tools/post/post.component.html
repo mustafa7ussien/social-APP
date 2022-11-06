@@ -1,0 +1,17 @@
+
+<mat-card style="border: 3px solid #F44336;position: relative;margin-top: 6em;">
+<mat-card-header>
+    <mat-card-title style="font-size: 1em;">{{creatorName}}</mat-card-title>
+    <mat-card-subtitle>{{creatorDescription}}</mat-card-subtitle>
+</mat-card-header>
+<img style="max-height: 300px;" mat-card-image  src="{{postData.imageUrl}}" alt="">
+<mat-card-content>
+    {{postData.comment}}
+</mat-card-content>
+<mat-card-actions>
+    <mat-icon (click)="onReplyClick()" class="action_item" color="warn">chat_bubble_outline</mat-icon>
+    <!-- <mat-icon class="action_item" color="warn">favorite_border</mat-icon>
+    <mat-icon class="action_item" color="warn">save</mat-icon> -->
+</mat-card-actions>
+</mat-card>
+<br>

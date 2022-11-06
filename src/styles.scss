@@ -1,1 +1,123 @@
+@use '@angular/material' as mat;
+// regular style toast
+@import '~ngx-toastr/toastr';
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$socialAPP-primary: mat.define-palette(mat.$indigo-palette);
+$socialAPP-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$socialAPP-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$socialAPP-theme: mat.define-light-theme((
+  color: (
+    primary: $socialAPP-primary,
+    accent: $socialAPP-accent,
+    warn: $socialAPP-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($socialAPP-theme);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$socialAPP-primary: mat.define-palette(mat.$indigo-palette);
+$socialAPP-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$socialAPP-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$socialAPP-theme: mat.define-light-theme((
+  color: (
+    primary: $socialAPP-primary,
+    accent: $socialAPP-accent,
+    warn: $socialAPP-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($socialAPP-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.footer {
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  color: #000;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer ul {
+  display: flex;
+}
+.footer ul li {
+  margin-right: 20px;
+}
+.footer ul li i {
+  padding: 5px 6px;
+  background-color: var(--primary-color);
+  color: var(--background-them);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+footer ul li:first-of-type:hover i {
+  background-color: #1877f2;
+  color: #fff;
+}
+footer ul li:nth-of-type(2):hover i {
+  background-color: #0077b5;
+  color: #fff;
+}
+footer ul li:last-of-type:hover i {
+  background-color: #333;
+  color: #fff;
+}

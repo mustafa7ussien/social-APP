@@ -1,0 +1,38 @@
+<div id="authenticator">
+    <mat-card id="authenticator-content">
+        <mat-card-header>
+            <mat-card-title>{{getStateText()}}</mat-card-title>
+        </mat-card-header>
+ 
+        <mat-card-content>
+            <div *ngIf="isLoginState()">
+                <input type="email" placeholder="Email" #loginEmail>
+                <input type="password" placeholder="Password" #loginPassword>
+                <button (click)="onLogin(loginEmail,loginPassword)"
+                 mat-flat-button color="warn">Login</button>
+            </div>
+            <div *ngIf="isRegisterState()">
+                <input type="email" placeholder="Email" #registerEmail>
+                <input type="password" placeholder="Password" #registerPassword>
+                <input type="password" placeholder="Confirm Password" #registerconfirmPassword>
+                <button (click)="onRgisterClick(registerEmail,registerPassword,registerconfirmPassword)" mat-flat-button color="warn">Creat Acount</button>
+            </div>
+            <div *ngIf="isForgotPasswordState()">
+                <input type="email" placeholder="Email" #resetEmail>
+                <button (click)="onReset(resetEmail)"
+                 mat-flat-button color="warn">Reset</button>
+            </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button (click)="onforgetPasswordClick()"
+             mat-flat-button>Forget Password</button>
+            <button (click)="onCreateAcountClick()"
+             mat-flat-button>Create an Acount</button>
+            <button (click)="onLoginClick()"
+            mat-flat-button>Login</button>
+
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>
